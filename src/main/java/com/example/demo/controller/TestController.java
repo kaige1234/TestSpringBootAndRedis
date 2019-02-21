@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import com.example.demo.pojo.User;
 import com.example.demo.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,6 +15,8 @@ public class TestController {
     @RequestMapping
     public String home() {
         testService.getValue();
+        User user = new User();
+        user.setName("dddd");
        return  "Hello World!";
     }
 }
